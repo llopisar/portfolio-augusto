@@ -1,0 +1,28 @@
+{
+  "name": "portfolio-augusto",
+  "version": "1.0.0",
+  "description": "Portfolio Augusto Llopis",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:dist/css --watch",
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llopisar/portfolio.git"
+  },
+  "author": "Augusto Llopis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/llopisar/portfolio/issues"
+  },
+  "homepage": "https://github.com/llopisar/portfolio#readme",
+  "devDependencies": {
+    "glob": "^11.0.3",
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.89.2",
+    "sharp": "^0.34.3"
+  }
+}
