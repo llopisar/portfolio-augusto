@@ -1,8 +1,2 @@
-@use 'base/variables';
-@use 'base/mixins';
-@use 'base/componentes';
-
-body {
-  background-color: black;
-    color: lime;
-}
+@use 'layout/header';
+@use 'base/globales'
