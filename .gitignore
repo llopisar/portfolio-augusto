@@ -2,7 +2,6 @@
 node_modules/
 
 # Carpetas generadas automáticamente
-dist/
 build/
 
 # Archivos temporales y logs
