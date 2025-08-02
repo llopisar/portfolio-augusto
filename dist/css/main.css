@@ -3,7 +3,7 @@
   width: 100%;
   margin-bottom: 10rem;
 }
-.header h1 {
+.header h2 {
   margin: 0;
 }
 
@@ -23,6 +23,16 @@ a:hover, a.active {
   color: #9F5FEC;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .video {
   position: relative;
   min-height: 30rem;
@@ -53,6 +63,10 @@ a:hover, a.active {
   max-width: 40rem;
   text-transform: uppercase;
   text-overflow: clip;
+}
+
+.video__contenido {
+  animation: fadeInUp 2s ease-out forwards;
 }
 
 html {
@@ -100,6 +114,7 @@ ul {
 }
 
 h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
   margin: 0 0 5rem 0;
   font-weight: 900;
 }

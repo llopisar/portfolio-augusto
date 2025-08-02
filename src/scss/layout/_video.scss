@@ -1,5 +1,6 @@
-@use 'base/variables' as v;
+@use '../base/variables' as v;
 @use "sass:color";
+@use '../base/animations' as *;
 
 
 .video {
@@ -46,4 +47,8 @@
   max-width: 40rem; // Opcional, para no ocupar todo el ancho
   text-transform: uppercase;
   text-overflow: clip;
+}
+
+.video__contenido {
+  animation: fadeInUp 2s ease-out forwards;
 }
