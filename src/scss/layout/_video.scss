@@ -1,0 +1,48 @@
+@use 'base/variables' as v;
+@use "sass:color";
+
+
+.video {
+    position: relative;
+    min-height: 30rem;
+    max-height: 60rem;
+    overflow: hidden;
+    border-radius: 15% 15% 15% 15%;
+    
+  .overlay {
+    position: absolute;
+    inset: 0;
+    // background-color: rgba(167, 20, 147, 0.151); // capa oscura sutil
+    background: linear-gradient(
+      270deg,
+      rgba(v.$color-secundario, 0.6),
+      rgba(color.adjust(v.$color-secundario, $lightness: -60%), 0.9)
+    );
+    backdrop-filter: blur(6px); // 💡 el blur real
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    padding-left: 5rem;
+    box-shadow: inset 0 0 80px rgba(12, 12, 12, 1);
+  }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;   
+  }
+
+}
+
+.video__contenido {
+  // background-color: rgba($color: #6331a1, $alpha: 0.4);
+  // padding: 1rem rem;
+  // border-radius: 1rem;
+  // backdrop-filter: blur(2px); // Suaviza el fondo del contenedor
+  max-width: 40rem; // Opcional, para no ocupar todo el ancho
+  text-transform: uppercase;
+  text-overflow: clip;
+}
