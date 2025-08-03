@@ -69,6 +69,23 @@ a:hover, a.active {
   animation: fadeInUp 2s ease-out forwards;
 }
 
+.about__container {
+  display: grid;
+  grid-template-areas: "about__block1 about__block3" "about__block2 about__block3";
+  max-width: 120rem;
+  gap: 2rem;
+  padding-top: 10rem;
+}
+
+.about__block1,
+.about__block2,
+.about__block3 {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  min-height: 20rem;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
