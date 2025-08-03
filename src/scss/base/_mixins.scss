@@ -35,3 +35,22 @@
     padding: 0;
     list-style: none;
 }
+
+
+@mixin card-style(
+  $bg: rgba(255, 255, 255, 0.05),
+  $shadow: 0 4px 20px rgba(0, 0, 0, 0.2),
+  $radius: 1rem,
+  $padding: 2rem
+) {
+  background-color: $bg;
+  box-shadow: $shadow;
+  border-radius: $radius;
+  padding: $padding;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+}

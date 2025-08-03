@@ -1,25 +1,43 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
-
+// Layout grid
 .about__container {
     display: grid;
     grid-template-areas: 
     "about__block1 about__block3"
     "about__block2 about__block3";
+    grid-template-columns: 1fr 1fr;
+    align-items: normal;
     max-width: 120rem;
     gap: 2rem;
-    padding-top: 10rem;
-    
+    padding: 15rem 0 15rem 0;
+    margin: 0 auto;
 
 }
 
-.about__block1,
-.about__block2,
-.about__block3 {
+//Individual Areas
+.about__block1{ grid-area: about__block1; }
+.about__block2{ grid-area: about__block2; }
+.about__block3{ grid-area: about__block3; }
+
+// Style cards
+.about__block {
   background-color: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
   border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 20rem;
-  
+
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+    @include m.card-style;
+    min-height: 20rem;
 }
+
+
+
 
