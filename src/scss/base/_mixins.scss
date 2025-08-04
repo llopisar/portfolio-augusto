@@ -37,16 +37,10 @@
 }
 
 
-@mixin card-style(
-  $bg: rgba(73, 73, 73, 0.295),
-  $shadow: 0 4px 20px rgba(0, 0, 0, 0.2),
-  $radius: 1rem,
-  $padding: 2rem
-) {
-  background-color: $bg;
-  box-shadow: $shadow;
-  border-radius: $radius;
-  padding: $padding;
+@mixin card-style {
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {

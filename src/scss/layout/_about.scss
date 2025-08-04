@@ -31,25 +31,16 @@
       #2a2a2a 100%         
     );
     color: v.$light;
-    border-radius: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
 
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    }
-
-  @include m.card-style;
-  min-height: 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: justify;
+     @include m.card-style;
 }
 
-// Texts and p
+
 
 .about__title {
     text-align: center;
