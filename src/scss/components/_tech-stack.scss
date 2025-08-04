@@ -1,0 +1,22 @@
+@use '../base/variables' as v;
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 4rem;
+
+  &__item {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: v.$accent;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+}

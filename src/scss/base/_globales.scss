@@ -17,13 +17,13 @@ html {
 body {
     font-family: v.$fuente-principal;
     font-optical-sizing: auto;
-    color: v.$color-texto;
-    background-color: v.$color-fondo;
+    color: v.$text;
+    background-color: v.$background;
     font-size: 2rem;
 }
 
 p {
-    color: v.$color-texto;
+    color: v.$text;
     line-height: 1.5;
 }
 
@@ -35,7 +35,7 @@ p {
 
 a {
     text-decoration: none;
-    color: v.$color-texto;
+    color: v.$text;
 }
 
 ul {

@@ -1,12 +1,18 @@
 $fuente-principal: "Inter", sans-serif;
 $fuente-secundaria: "Montserrat", sans-serif;
 
-//Colores
-$color-fondo: #121212;
-$color-contenedor: #1F1F1F; //(Tarjetas, navbar, secciones)//
-$color-texto: #E0E0E0; //(Textos, títulos, enlaces)//
-$color-principal: #0FF1CE; //(	Botones, íconos, hovers)//
-$color-secundario: #9F5FEC; //(Detalles especiales, resaltados, hovers )//
+//PALETA DE COLORES PRINCIPAL
+
+$background:       #121212;   // Fondo base general
+$surface:          #1F1F1F;   // Contenedores, navbar, secciones
+$text:             #E0E0E0;   // Texto base (parrafos, links)
+$primary:          #0FF1CE;   // Elementos clave (botones, links, etc)
+$accent:           #9F5FEC;   // Detalles decorativos o destacados
+
+//Variables complementarias
+
+$light:            #e0e0e0;   // Para fondos oscuros
+$dark:             #0e0e0e;   // Para fondos claros o contraste interno
 
 // Media Queries
 $telefono: 480px;
