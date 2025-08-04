@@ -20,6 +20,11 @@
   gap: 5rem;
 }
 
+a {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  font-size: 1.8rem;
+}
 a:hover, a.active {
   color: #9F5FEC;
 }
@@ -34,11 +39,20 @@ a:hover, a.active {
     transform: translateY(0);
   }
 }
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-20deg);
+  }
+}
 .video {
   position: relative;
   min-height: 30rem;
   max-height: 60rem;
   overflow: hidden;
+  margin-bottom: 8rem;
 }
 .video .overlay {
   position: absolute;
@@ -50,8 +64,7 @@ a:hover, a.active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
-  padding-left: 5rem;
+  padding: 2rem 0 2rem 5rem;
   box-shadow: inset 0 0 80px rgb(12, 12, 12);
 }
 .video video {
@@ -71,15 +84,19 @@ a:hover, a.active {
   animation: fadeInUp 2s ease-out forwards;
 }
 
+.about {
+  padding: 10rem 0;
+}
+
 .about__container {
   display: grid;
   grid-template-areas: "about__block1 about__block3" "about__block2 about__block3";
   grid-template-columns: 1fr 1fr;
   align-items: normal;
-  max-width: 120rem;
-  gap: 2rem;
-  padding: 15rem 0 15rem 0;
+  max-width: 100rem;
+  gap: 1.5rem;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .about__block1 {
@@ -94,16 +111,30 @@ a:hover, a.active {
   grid-area: about__block3;
 }
 
+.about__block3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.03) 40%, transparent 60%);
+  pointer-events: none;
+  transform: translateX(-100%);
+  animation: sweep 6s ease-in-out infinite;
+}
+
 .about__block {
-  background: linear-gradient(135deg, #1e1e1e 0%, #3a3a3a 40%, #8e8e8e 60%, #2a2a2a 100%);
+  background: linear-gradient(135deg, rgba(30, 30, 47, 0.3) 0%, rgba(108, 79, 196, 0.3) 40%, rgba(15, 241, 206, 0.3) 80%, rgba(30, 30, 47, 0.3) 100%);
   color: #e0e0e0;
   min-height: 20rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: justify;
+  justify-content: flex-start;
+  text-align: left;
+  line-height: 1.6;
+  position: relative;
+  overflow: hidden;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.5rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -114,12 +145,15 @@ a:hover, a.active {
 
 .about__title {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 3rem;
+  letter-spacing: 0.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .about__title--content {
   margin: 3rem;
+  font-size: 1.5rem;
 }
 
 html {
@@ -238,6 +272,7 @@ body > section {
   font-size: 1.4rem;
   font-weight: 500;
   color: #9F5FEC;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 .tech-stack__item:hover {
