@@ -1,1 +1,1 @@
-const toggles=document.querySelectorAll(".project-card__toggle");toggles.forEach(e=>{e.addEventListener("click",o=>{o.stopPropagation();e.closest(".project-card").classList.toggle("is-open")})});
+const toggles=document.querySelectorAll(".project-card__toggle");toggles.forEach(e=>{e.addEventListener("click",()=>{e.closest(".project-card").classList.toggle("is-open")})});

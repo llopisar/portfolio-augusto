@@ -69,41 +69,108 @@
     }
   }
 
-  &--soon {
-    opacity: 0.5;
-    text-align: center;
-    font-style: italic;
-    cursor: not-allowed;
-    margin-bottom: 2rem;
+  &__toggle {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    .project-card__text {
+    
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .arrow {
+      text-decoration: none;
+    }
   }
 
   &__extra {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
+    padding-top: 1.5rem;
   }
 
-  &__toggle {
-    background-color: v.$primary;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.6rem;
-    font-size: 1.6rem;
-    margin-top: 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  &.is-open &__extra {
+    max-height: 1000px;
+  }
+
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 3rem;
+
+    img {
+      width: 400px;
+      height: auto; // mantiene proporción
+      display: block;
+    }
+  }
+
+  &__long-description {
+    flex: 2;
+    max-width: 400px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 1rem 0;
+    max-height: 270px; 
+    overflow-y: auto;
+    padding-right: 1rem;
+  }
+
+  &__image {
+    flex: 1;
+    min-width: 200px;
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+// 🔘 Botones reutilizables
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+
+  &--demo {
+    background-color: orange;
+    color: black;
 
     &:hover {
-      background-color: color.adjust(v.$primary, $lightness: -10%);
+      background-color: color.adjust(orange, $lightness: -10%);
+    }
+  }
+
+  &--repo {
+    background-color: v.$accent;
+    color: white;
+
+    &:hover {
+      background-color: color.adjust(v.$accent, $lightness: -10%);
     }
   }
 }
 
 
-
 .project-card.is-open .project-card__extra {
-  max-height: 500px;
+  max-height: 1000px;
 }
 
 .project-card__buttons {
@@ -124,7 +191,8 @@
 
   .btn--primary {
     background-color: v.$primary;
-    color: white;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 
     &:hover {
       background-color: color.adjust(v.$primary, $lightness: -10%);

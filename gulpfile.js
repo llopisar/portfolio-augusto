@@ -1,54 +1,55 @@
-import path from 'path'
-import fs from 'fs'
-// import {glob} from 'glob' //
-import { src, dest, watch, series } from 'gulp'
+import { src, dest, watch, series, parallel } from 'gulp'
 import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass'
+import terser from 'gulp-terser'
 
 const sass = gulpSass(dartSass)
 
-import terser from 'gulp-terser'
-import sharp from 'sharp'
-
-export function js( done ) {
-    src('src/js/main.js')
-        .pipe(terser())
-        .pipe( dest('dist/js') ) 
-
-    done()
+/* HTML: copiar todo lo .html desde src a dist */
+export function html() {
+  return src('src/**/*.html')
+    .pipe(dest('dist'))
 }
 
-export function css( done ) {
-    src('src/scss/main.scss', {sourcemaps: true})
-        .pipe( sass({
-            outputStyle: 'compressed'
-        }).on('error', sass.logError) )
-        .pipe( dest('dist/css', {sourcemaps: '.'}) )
-
-    done()
+/* CSS: compilar SCSS -> CSS minificado + sourcemap */
+export function css() {
+  return src('src/scss/main.scss', { sourcemaps: true })
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(dest('dist/css', { sourcemaps: '.' }))
 }
 
-function procesarImagenes(file, outputSubDir) {
-    if (!fs.existsSync(outputSubDir)) {
-        fs.mkdirSync(outputSubDir, { recursive: true })
-    }
-    const baseName = path.basename(file, path.extname(file))
-    const extName = path.extname(file)
-    const outputFile = path.join(outputSubDir, `${baseName}${extName}`)
-    const outputFileWebp = path.join(outputSubDir, `${baseName}.webp`)
-    const outputFileAvif = path.join(outputSubDir, `${baseName}.avif`)
-
-    const options = { quality: 80 }
-    sharp(file).jpeg(options).toFile(outputFile)
-    sharp(file).webp(options).toFile(outputFileWebp)
-    sharp(file).avif().toFile(outputFileAvif)
+/* JS: minificar a dist/js */
+export function js() {
+  return src('src/js/main.js')
+    .pipe(terser())
+    .pipe(dest('dist/js'))
 }
 
+/* Imágenes: copiar tal cual */
+export function images() {
+  return src('src/img/**/*', { encoding: false })
+    .pipe(dest('dist/img'))
+}
+
+/* Assets (iconos, fuentes, favicons, etc.) */
+export function assets() {
+  return src('src/assets/**/*')
+    .pipe(dest('dist/assets'))
+}
+
+/* Modo desarrollo: watchers */
 export function dev() {
-    watch('src/scss/**/*.scss', css)
-    watch('src/js/**/*.js', js)
-    // watch('src/js/**/*.{png,jpg}', imagenes) // por ahora no uso
+  watch('src/**/*.html', html)
+  watch('src/scss/**/*.scss', css)
+  watch('src/js/**/*.js', js)
+  watch('src/img/**/*', images)
+  watch('src/assets/**/*', assets)
 }
 
+/* Tareas compuestas */
+export const build = series(
+  html,
+  parallel(css, js, images, assets)
+)
 
-export default series( js, css, dev )
+export default series(build, dev)

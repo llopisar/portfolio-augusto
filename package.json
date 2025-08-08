@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Portfolio Augusto Llopis",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "sass": "sass src/scss:dist/css --watch",
-    "dev": "gulp"
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
