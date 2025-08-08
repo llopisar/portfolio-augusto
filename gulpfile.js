@@ -27,14 +27,20 @@ export function js() {
 
 /* Imágenes: copiar tal cual */
 export function images() {
-  return src('src/img/**/*', { encoding: false })
+  return src('src/img/**/*.{png,jpg,jpeg,svg,gif,webp,avif,ico}', { encoding: false })
     .pipe(dest('dist/img'))
 }
 
 /* Assets (iconos, fuentes, favicons, etc.) */
 export function assets() {
-  return src('src/assets/**/*')
+  return src('src/assets/**/*', { encoding: false })
     .pipe(dest('dist/assets'))
+}
+
+/* Videos: copiar tal cual */
+export function videos() {
+  return src('src/videos/**/*.{mp4,webm,ogv,mov}', { encoding: false })
+    .pipe(dest('dist/videos'))
 }
 
 /* Modo desarrollo: watchers */
@@ -44,12 +50,13 @@ export function dev() {
   watch('src/js/**/*.js', js)
   watch('src/img/**/*', images)
   watch('src/assets/**/*', assets)
+  watch('src/videos/**/*', videos)
 }
 
-/* Tareas compuestas */
+/* Build final */
 export const build = series(
   html,
-  parallel(css, js, images, assets)
+  parallel(css, js, images, assets, videos)
 )
 
 export default series(build, dev)
