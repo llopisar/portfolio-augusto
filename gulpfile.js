@@ -8,7 +8,7 @@ const sass = gulpSass(dartSass)
 /* HTML: copiar todo lo .html desde src a dist */
 export function html() {
   return src('src/**/*.html')
-    .pipe(dest('dist'))
+    .pipe(dest('docs'))
 }
 
 /* CSS: compilar SCSS -> CSS minificado + sourcemap */
