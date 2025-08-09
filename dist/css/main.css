@@ -174,7 +174,7 @@ a:hover, a.active {
   padding: 1.5rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 1.5rem;
+  padding: 1rem;
   transition: transform 0.3s ease;
 }
 .project-card:hover {
@@ -276,60 +276,38 @@ a:hover, a.active {
   gap: 1rem;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.6rem;
-  font-size: 1.4rem;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  font-weight: 600;
-}
-.btn--demo {
-  background-color: orange;
-  color: black;
-}
-.btn--demo:hover {
-  background-color: #cc8400;
-}
-.btn--repo {
-  background-color: #9F5FEC;
-  color: white;
-}
-.btn--repo:hover {
-  background-color: rgb(131.6480446927, 49.4134078212, 230.5865921788);
-}
-
 .project-card.is-open .project-card__extra {
   max-height: 1000px;
 }
 
 .project-card__buttons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
 }
 .project-card__buttons .btn {
+  display: inline-block;
   padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
   text-decoration: none;
-  font-size: 1.6rem;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  cursor: pointer;
 }
 .project-card__buttons .btn--primary {
-  background-color: #0FF1CE;
-  color: rgb(255, 255, 255);
+  background-color: #133C55;
+  color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 .project-card__buttons .btn--primary:hover {
   background-color: rgb(11.2992125984, 193.7007874016, 165.4527559055);
 }
 .project-card__buttons .btn--secondary {
-  background-color: #9F5FEC;
-  color: white;
+  background-color: #828489;
+  color: #fff;
 }
 .project-card__buttons .btn--secondary:hover {
   background-color: rgb(131.6480446927, 49.4134078212, 230.5865921788);

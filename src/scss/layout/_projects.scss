@@ -20,7 +20,7 @@
 .project-card {
   background-color: v.$surface;
   @include m.card-style;
-  padding: 1.5rem;
+  padding: 1rem;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -75,11 +75,12 @@
     cursor: pointer;
 
     .project-card__text {
-    
+
       &:hover {
         text-decoration: underline;
       }
     }
+
     .arrow {
       text-decoration: none;
     }
@@ -118,7 +119,7 @@
     line-height: 1.5;
     text-align: justify;
     margin: 1rem 0;
-    max-height: 270px; 
+    max-height: 270px;
     overflow-y: auto;
     padding-right: 1rem;
   }
@@ -139,59 +140,32 @@
   }
 }
 
-// 🔘 Botones reutilizables
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.6rem;
-  font-size: 1.4rem;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  font-weight: 600;
-
-  &--demo {
-    background-color: orange;
-    color: black;
-
-    &:hover {
-      background-color: color.adjust(orange, $lightness: -10%);
-    }
-  }
-
-  &--repo {
-    background-color: v.$accent;
-    color: white;
-
-    &:hover {
-      background-color: color.adjust(v.$accent, $lightness: -10%);
-    }
-  }
-}
-
-
 .project-card.is-open .project-card__extra {
   max-height: 1000px;
 }
 
 .project-card__buttons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+
 
   .btn {
+    display: inline-block;
     padding: 0.8rem 1.6rem;
-    border: none;
-    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 1.6rem;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    cursor: pointer;
   }
 
   .btn--primary {
-    background-color: v.$primary;
-    color: rgb(255, 255, 255);
+    background-color: v.$boton1;
+    color: #fff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 
     &:hover {
@@ -200,8 +174,8 @@
   }
 
   .btn--secondary {
-    background-color: v.$accent;
-    color: white;
+    background-color: v.$boton2;
+    color: #fff;
 
     &:hover {
       background-color: color.adjust(v.$accent, $lightness: -10%);
