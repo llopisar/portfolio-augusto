@@ -181,9 +181,38 @@
 
     </section>
 
-    <section class="contact" id="contact">
-      <!-- Form o redes -->
+    <section class="contact" id="contacto">
+     <div class="contact__wrapper contenedor">
+
+            <div class="contact__form">
+              <form action="https://formspree.io/f/TU_ID" method="POST">
+
+                <div class="name">
+                  <label for="nombre">Name</label>
+                  <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="email">
+                  <label for="email">E-Mail</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="message">
+                  <label for="mensaje">Message</label>
+                  <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                
+                <button class="send" type="submit">Send</button>
+              </form>
+            </div> <!--cierre de form-->
+
+            <div  class="contact__imagen">
+                <img src="" alt="">
+            </div>
+
+      </div> <!--cierre wrapper-->
     </section>
+    
   </main>
 
   <footer class="footer">
