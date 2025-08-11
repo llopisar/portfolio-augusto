@@ -15,7 +15,7 @@
   "about__block2 about__block3";
   grid-template-columns: 1fr 1fr;
   align-items: normal;
-  max-width: 100rem;
+  max-width: 73%;
   gap: 1.5rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -84,5 +84,40 @@
   font-size: 1.5rem;
 }
 
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.tech-stack__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-stack__item:hover {
+  transform: scale(1.05);
+}
+
+.tech-stack__item i {
+  font-size: 2rem;
+}
+
+/* Colores por tecnología */
+.devicon-html5-plain { color: #e34f26; }
+.devicon-css3-plain { color: #1572b6; }
+.devicon-javascript-plain { color: #f7df1e; }
+.devicon-sass-original { color: #cc6699; }
+.devicon-gulp-plain { color: #cf4647; }
+.devicon-git-plain { color: #f1502f; }
+.devicon-github-original { color: #fff; }
+.devicon-netlify-plain { color: #00c7b7; }
 
 
