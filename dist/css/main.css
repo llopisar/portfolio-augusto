@@ -156,6 +156,9 @@ a:hover, a.active {
   font-size: 1.5rem;
 }
 
+.projects {
+  padding-bottom: 8rem;
+}
 .projects__title {
   font-size: 5rem;
   text-align: center;
@@ -175,6 +178,7 @@ a:hover, a.active {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 1rem;
+  margin-bottom: 4rem;
   transition: transform 0.3s ease;
 }
 .project-card:hover {
@@ -311,6 +315,127 @@ a:hover, a.active {
 }
 .project-card__buttons .btn--secondary:hover {
   background-color: rgb(131.6480446927, 49.4134078212, 230.5865921788);
+}
+
+.contacto {
+  margin: 3rem auto;
+}
+
+.contacto__contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 3rem;
+  background: #1F1F1F;
+  border-radius: 1rem;
+  padding: 2.4rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.contacto__eyebrow {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(159, 95, 236, 0.15);
+  border: 1px solid rgba(159, 95, 236, 0.4);
+  color: #9F5FEC;
+  margin-bottom: 0.4rem;
+}
+
+.contacto__imagen {
+  width: 70%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.contacto__imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.95) contrast(1.05);
+  transform: scale(1.005);
+  transition: transform 0.3s ease;
+}
+
+.contacto__imagen:hover img {
+  transform: scale(1.03);
+}
+
+.contacto__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.contacto__info h2 {
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.contacto__info p {
+  font-size: 1.8rem;
+  color: #E0E0E0;
+  opacity: 0.9;
+}
+
+.contacto__redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.contacto__redes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(159, 95, 236, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  color: #E0E0E0;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.contacto__redes a:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #9F5FEC;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.contacto__redes a:focus-visible {
+  outline: 2px solid #0FF1CE;
+  outline-offset: 2px;
+}
+
+.contacto__redes img,
+.contacto__redes svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.contacto__redes svg {
+  fill: currentColor;
 }
 
 html {
