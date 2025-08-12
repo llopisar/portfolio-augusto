@@ -77,6 +77,15 @@
   transition: transform .18s ease, background .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
+.cta--primary{
+padding-right: 1rem;
+}
+
+.cta--secondary{
+padding-right: 1rem;
+}
+
+
 .cta:hover{
   transform: translateY(-2px);
   background: v.$boton4;

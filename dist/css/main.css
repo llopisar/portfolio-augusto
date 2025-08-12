@@ -115,6 +115,14 @@ a:hover, a.active {
   transition: transform 0.18s ease, background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+.cta--primary {
+  padding-right: 1rem;
+}
+
+.cta--secondary {
+  padding-right: 1rem;
+}
+
 .cta:hover {
   transform: translateY(-2px);
   background: rgba(253, 253, 253, 0.1176470588);
