@@ -1,9 +1,6 @@
 # Dependencias
 node_modules/
 
-# Carpetas generadas automáticamente
-build/
-
 # Archivos temporales y logs
 *.log
 .DS_Store
