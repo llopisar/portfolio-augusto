@@ -96,7 +96,7 @@ a:hover, a.active {
   max-width: 73%;
   gap: 1.5rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 7rem;
 }
 
 .about__block1 {
@@ -142,6 +142,11 @@ a:hover, a.active {
   transform: translateY(-5px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
+.about__block h3 {
+  text-align: left;
+  margin: 1rem 3rem;
+  font-size: 1.4rem;
+}
 
 .about__title {
   text-align: center;
@@ -152,34 +157,12 @@ a:hover, a.active {
 }
 
 .about__title--content {
-  margin: 3rem;
-  font-size: 1.5rem;
+  margin: 1rem 3rem;
+  font-size: 1.8rem;
 }
 
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.tech-stack__item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.4rem;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.tech-stack__item:hover {
-  transform: scale(1.05);
-}
-
-.tech-stack__item i {
-  font-size: 2rem;
+.about__block3 .tech-stack {
+  margin: 1rem 3rem;
 }
 
 /* Colores por tecnología */
@@ -606,18 +589,19 @@ body > section {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 4rem;
+  margin: 3rem;
 }
 .tech-stack__item {
   background-color: rgba(255, 255, 255, 0.08);
-  padding: 0.6rem 1.2rem;
-  border-radius: 9999px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #9F5FEC;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #E0E0E0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 .tech-stack__item:hover {
   background-color: rgba(255, 255, 255, 0.15);
+  color: #1F1F1F;
 }/*# sourceMappingURL=main.css.map */
