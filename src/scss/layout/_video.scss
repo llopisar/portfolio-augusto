@@ -13,7 +13,7 @@
   .overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(167, 20, 147, 0.151); // capa oscura sutil
+    background-color: rgba(167, 20, 147, 0.151); 
     background: linear-gradient(
       270deg,
       rgba(v.$accent, 0.6),
@@ -38,9 +38,47 @@
 }
 
 .video__contenido {
-  max-width: 40rem; // Opcional, para no ocupar todo el ancho
+  max-width: 60rem;
   text-transform: uppercase;
   text-overflow: clip;
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    text-transform: none;
+  }
 }
 
 .video__contenido { animation: fadeInUp 2s ease-out forwards; }
+
+//CTA de projects y download//
+.cta-group{
+  display: inline-flex;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta{
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 1.1rem 1.6rem;
+  border-radius: 12px;
+  border: 1px solid v.$light;
+  background: v.$boton3;
+  color: #E0E0E0;
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: .02em;
+  box-shadow: 0 8px 24px rgba(0,0,0,.22);
+  transition: transform .18s ease, background .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.cta:hover{
+  transform: translateY(-2px);
+  background: v.$boton4;
+  box-shadow: 0 12px 30px rgba(0,0,0,.30);
+}
