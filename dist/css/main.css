@@ -170,8 +170,13 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem 0 2rem 5rem;
+  padding: 2rem;
   box-shadow: inset 0 0 80px rgb(12, 12, 12);
+}
+@media (min-width: 768px) {
+  .video .overlay {
+    padding: 2rem 0 2rem 5rem;
+  }
 }
 .video video {
   width: 100%;
@@ -186,14 +191,33 @@ html {
   text-overflow: clip;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
+.video__contenido h1 {
+  font-size: 3rem;
+  margin: 1rem;
+}
+@media (min-width: 768px) {
+  .video__contenido h1 {
+    font-size: 5rem;
+  }
+}
 .video__contenido h3 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .video__contenido h3 {
+    font-size: 2rem;
+  }
 }
 .video__contenido p {
+  font-size: 1.4rem;
   text-transform: none;
   font-weight: 200;
+}
+@media (min-width: 768px) {
+  .video__contenido p {
+    font-size: 1.8rem;
+  }
 }
 
 .video__contenido {
@@ -210,6 +234,7 @@ html {
 .cta {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   gap: 0.6rem;
   padding: 1.1rem 1.6rem;
   border-radius: 12px;
@@ -244,11 +269,18 @@ html {
 .about__container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 2.4rem;
   display: grid;
-  gap: 16px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "about__block1 about__block3" "about__block2 about__block3";
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.4rem;
+  grid-template-areas: "about__block1" "about__block2" "about__block3" "about__block4";
+}
+@media (min-width: 1200px) {
+  .about__container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "about__block1 about__block3" "about__block2 about__block3" "about__block4 about__block4";
+  }
 }
 
 .about__block1 {
@@ -263,6 +295,10 @@ html {
   grid-area: about__block3;
 }
 
+.about__block4 {
+  grid-area: about__block4;
+}
+
 .about__block3::before {
   content: "";
   position: absolute;
@@ -274,7 +310,7 @@ html {
   animation: sweep 6s ease-in-out infinite;
 }
 
-.about__block {
+.about__block, .about__block4 {
   background: linear-gradient(135deg, rgba(30, 30, 47, 0.3) 0%, rgba(108, 79, 196, 0.3) 40%, rgba(15, 241, 206, 0.3) 80%, rgba(30, 30, 47, 0.3) 100%);
   color: #e0e0e0;
   min-height: 20rem;
@@ -285,16 +321,18 @@ html {
   line-height: 1.6;
   position: relative;
   overflow: hidden;
+  padding: 1.5rem 2rem;
+  margin: 1rem 3rem;
   border-radius: 1rem;
   padding: 1.5rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.about__block:hover {
+.about__block:hover, .about__block4:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
-.about__block h3 {
+.about__block h3, .about__block4 h3 {
   text-align: left;
   margin: 1rem 3rem;
   font-size: 1.4rem;
@@ -302,19 +340,42 @@ html {
 
 .about__title {
   text-align: center;
-  font-size: 3rem;
-  margin: 3rem;
-  letter-spacing: 0.2rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  font-size: 2.4rem;
+}
+@media (min-width: 768px) {
+  .about__title {
+    font-size: 3rem;
+  }
 }
 
 .about__title--content {
-  margin: 1rem 3rem;
-  font-size: 1.8rem;
+  margin: 1rem 2rem;
+  font-size: 1.6rem;
+}
+@media (min-width: 768px) {
+  .about__title--content {
+    font-size: 1.8rem;
+  }
 }
 
 .about__block3 .tech-stack {
   margin: 1rem 3rem;
+}
+
+.about__block4 ul {
+  margin: 1rem 3rem;
+  padding-left: 2rem;
+  font-size: 1.8rem;
+  list-style-type: disc;
+}
+.about__block4 ul li {
+  margin-bottom: 0.8rem;
+}
+.about__block4 em {
+  display: block;
+  margin: 2rem 3rem 1rem;
+  font-size: 1.6rem;
+  font-style: italic;
 }
 
 /* Colores por tecnología */

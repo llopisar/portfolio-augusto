@@ -1,6 +1,7 @@
 @use '../base/variables' as v;
-@use "sass:color";
 @use '../base/animations' as *;
+@use '../base/mixins' as m;
+@use "sass:color";
 
 
 .video {
@@ -24,8 +25,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem 0 2rem 5rem;
+    padding: 2rem;
     box-shadow: inset 0 0 80px rgba(12, 12, 12, 1);
+
+    @include m.tablet {
+    padding: 2rem 0 2rem 5rem;
+  }
   }
 
     video {
@@ -43,14 +48,32 @@
   text-overflow: clip;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   
+
+  h1 {
+    font-size: 3rem;
+    margin: 1rem;
+    
+    @include m.tablet {
+      font-size: 5rem;
+    }
+  }
+
   h3 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-     font-weight: 400;
+    font-size: 1.6rem;
+    margin: 0;
+
+    @include m.tablet {
+      font-size: 2rem;
+    }
   }
   p {
+    font-size: 1.4rem;
     text-transform: none;
     font-weight: 200;
+
+    @include m.tablet {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -67,6 +90,7 @@
 .cta{
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   gap: .6rem;
   padding: 1.1rem 1.6rem;
   border-radius: 12px;
