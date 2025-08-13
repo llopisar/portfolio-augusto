@@ -161,3 +161,22 @@ const navLinks = document.querySelector('.nav__links');
 toggleBtn.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
+
+const navLinksItems = document.querySelectorAll('.nav__links a');
+
+navLinksItems.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active'); // Cierra el menú
+  });
+});
+
+document.addEventListener('click', (e) => {
+  const clickedInsideMenu = navLinks.contains(e.target);
+  const clickedToggle = toggleBtn.contains(e.target);
+
+  const menuIsOpen = navLinks.classList.contains('active');
+
+  if (!clickedInsideMenu && !clickedToggle && menuIsOpen) {
+    navLinks.classList.remove('active');
+  }
+});
