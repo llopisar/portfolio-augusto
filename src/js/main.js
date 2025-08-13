@@ -154,3 +154,10 @@ window.addEventListener('resize', setHeaderH);
     if (sections[0]) setActive(sections[0].id);
   });
 })();
+
+const toggleBtn = document.querySelector('.nav__toggle');
+const navLinks = document.querySelector('.nav__links');
+
+toggleBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
