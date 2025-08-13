@@ -1,4 +1,5 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .contacto {
   margin: 3rem auto;
@@ -10,21 +11,27 @@
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 2fr 3fr; // imagen / info
+  grid-template-columns: 1fr;
   gap: 3rem;
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
 
   background: v.$surface;
   border-radius: 1rem;
   padding: 2.4rem;
   box-shadow: 0 4px 20px rgba(0,0,0,.2);
 
-  position: relative;
-  overflow: hidden;
+  @include m.tablet {
+    grid-template-columns: 2fr 3fr;
+    text-align: left;
+  }
 }
 
 .contacto__eyebrow {
   display: inline-block;
-  align-self: flex-start;
+  align-self: center;
   padding: .4rem .8rem;
   border-radius: 10rem;
   font-size: 1.2rem;
@@ -34,37 +41,56 @@
   border: 1px solid rgba(v.$accent, 0.4);
   color: v.$accent;
   margin-bottom: .4rem;
+
+  @include m.tablet {
+    align-self:self-start;
+  }
+
 }
 
-// Lado Imagen
+
 .contacto__imagen {
-  width: 70%;
+  width: 60%;
   aspect-ratio: 1 / 1; 
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
+  max-width: 220px;
+
+  @include m.tablet {
+    width: 100%;
+    max-width: none;
+  }
 }
 
-.contacto__imagen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: saturate(0.95) contrast(1.05);
-  transform: scale(1.005);
-  transition: transform .3s ease;
+.contacto__imagen {
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 220px;
+
+  @include m.tablet {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 .contacto__imagen:hover img {
   transform: scale(1.03);
 }
 
-// Lado Info
+
 .contacto__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.6rem;
+
+  @include m.tablet {
+    align-items: flex-start;
+  }
 }
 
 .contacto__info h2 {
@@ -89,6 +115,11 @@
   list-style: none;
   padding: 0;
   margin-left: 0;
+  align-self: center;
+
+  @include m.tablet {
+    align-self: self-start;
+  }
 }
 
 .contacto__redes a {
