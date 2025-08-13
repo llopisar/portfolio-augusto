@@ -1,9 +1,28 @@
-const toggles = document.querySelectorAll('.project-card__toggle');
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 
-toggles.forEach(button => {
-  button.addEventListener('click', () => {
-    const card = button.closest('.project-card');
-    card.classList.toggle('is-open');
+document.querySelectorAll('.project-card__toggle-btn').forEach(btn => {
+  const extraId = btn.getAttribute('aria-controls');
+  const extra = document.getElementById(extraId);
+  const card = btn.closest('.project-card');
+
+  if (!extra) return;
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    extra.hidden = open;
+    card.classList.toggle('is-open', !open);
+  });
+
+
+  extra.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      btn.setAttribute('aria-expanded', 'false');
+      extra.hidden = true;
+      card.classList.remove('is-open');
+      btn.focus();
+    }
   });
 });
 
@@ -45,7 +64,6 @@ const setHeaderH = () => {
 setHeaderH();
 window.addEventListener('resize', setHeaderH);
 
-// === Scroll suave en los clics del nav (con offset por header sticky) ===
 (function () {
   const links = document.querySelectorAll('.nav__links a[href^="#"]');
 
@@ -72,8 +90,6 @@ window.addEventListener('resize', setHeaderH);
   });
 })();
 
-
-// === Scroll spy sencillo (resalta el link de la sección visible) ===
 (function () {
   const links = Array.from(document.querySelectorAll('.nav__links a[href^="#"]'));
   const sections = links

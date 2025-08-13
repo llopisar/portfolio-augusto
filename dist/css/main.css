@@ -137,6 +137,7 @@ html {
   max-width: 60rem;
   text-transform: uppercase;
   text-overflow: clip;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 .video__contenido h3 {
   font-size: 2rem;
@@ -462,6 +463,42 @@ html {
 }
 .project-card__buttons .btn--secondary:hover {
   background-color: rgb(131.6480446927, 49.4134078212, 230.5865921788);
+}
+
+.project-card__toggle-btn {
+  /* reset básico para que se vea como link pero sea botón accesible */
+  appearance: none;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  /* micro‑interacciones */
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+  /* subrayado solo al hover, como tenías antes en el texto */
+  /* foco visible accesible */
+  /* la flecha necesita poder rotar */
+}
+.project-card__toggle-btn:hover .project-card__text {
+  text-decoration: underline;
+}
+.project-card__toggle-btn:focus-visible {
+  outline: 2px solid #0FF1CE;
+  outline-offset: 2px;
+}
+.project-card__toggle-btn .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* cuando la tarjeta está abierta, rotamos la flecha */
+.project-card.is-open .project-card__toggle .arrow {
+  transform: rotate(180deg);
 }
 
 .contacto {
