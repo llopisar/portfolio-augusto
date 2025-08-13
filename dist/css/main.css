@@ -585,6 +585,14 @@ html {
   fill: currentColor;
 }
 
+.footer p {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  color: #E0E0E0;
+  opacity: 50%;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
