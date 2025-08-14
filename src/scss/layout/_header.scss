@@ -7,9 +7,8 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-
   /* fondo translúcido al inicio */
-  background: rgba(v.$surface, 0.35);
+  background: rgba(v.$surface, 0.35); 
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   margin-bottom: 6rem;
@@ -41,7 +40,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.6rem 2rem;
-
 
   @include m.tablet {
     flex-wrap: nowrap;
@@ -81,7 +79,6 @@
   }
 }
 
-
 a {
   text-transform: uppercase;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
@@ -104,8 +101,6 @@ a {
     display: none;
   }
 }
-
-
 
 .skip-link {
   position: absolute;
