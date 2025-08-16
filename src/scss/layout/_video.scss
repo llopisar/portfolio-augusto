@@ -3,6 +3,10 @@
 @use '../base/mixins' as m;
 @use "sass:color";
 
+#home {
+  padding-top: 10rem; 
+  padding-bottom: 5rem;
+}
 
 .video {
     position: relative;

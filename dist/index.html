@@ -61,6 +61,134 @@
     </div>
   </section>
 
+  <section class="projects" id="projects">
+    <h2 class="projects__title">Projects</h2>
+    <div class="projects__list">
+
+      <article class="project-card contenedor">
+        <div class="project-card__content">
+          <div class="project-card__info">
+            <h3 class="project-card__title">Foodies Festival</h3>
+            <p class="project-card__description">
+              Responsive landing page built with semantic HTML structure, modular Sass styles, and JavaScript scroll
+              animations. <br>
+              Real project based on an existing festival website.
+            </p>
+          </div>
+
+          <div class="project-card__tech">
+            <img src="./assets/icons/html.svg" alt="HTML" title="HTML">
+            <img src="./assets/icons/css.svg" alt="CSS" title="CSS">
+            <img src="./assets/icons/javascript.svg" alt="JavaScript" title="JavaScript">
+          </div>
+        </div>
+
+        <div class="project-card__toggle">
+          <button class="project-card__toggle-btn" aria-expanded="false" aria-controls="project1-extra">
+            <span class="project-card__text">View More</span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+        </div>
+
+        <div id="project1-extra" class="project-card__extra contenedor" hidden>
+          <img src="./img/project1.png" alt="Festival">
+          <div class="project-card__buttons">
+            <a href="https://foodies-festival.netlify.app/" class="btn btn--primary" target="_blank" rel="noopener">Live
+              Demo</a>
+            <a href="https://github.com/llopisar/foodies-festival" class="btn btn--secondary" target="_blank"
+              rel="noopener">GitHub Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card contenedor">
+        <div class="project-card__content">
+          <div class="project__info">
+            <h3 class="project-card__title">A11Y Contrast Checker</h3>
+            <p class="project-card__description">
+              A simple, responsive web tool to test color contrast ratios between background and text colors — following
+              <br>
+              WCAG accessibility standards.
+            </p>
+          </div>
+          <div class="project-card__tech">
+            <img src="./assets/icons/html.svg" alt="HTML" title="HTML">
+            <img src="./assets/icons/css.svg" alt="CSS" title="CSS">
+            <img src="./assets/icons/javascript.svg" alt="JavaScript" title="JavaScript">
+          </div>
+        </div>
+
+        <div class="project-card__toggle">
+          <button class="project-card__toggle-btn" aria-expanded="false" aria-controls="project2-extra">
+            <span class="project-card__text">View More</span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+        </div>
+
+        <div class="project-card__extra contenedor">
+          <div id="project2-extra" class="project2-card__extra contenedor" hidden>
+            <img src="./img/demo.gif" alt="Contrast Checker demo">
+            <p>
+              Web tool to validate text and background color contrast according to accessibility standards (WCAG).
+              It allows you to pick two colors, view the contrast ratio in real time, and check if they meet AA or AAA
+              compliance levels. Includes dark mode with saved user preference, copy-to-clipboard for HEX values, and a
+              clean, responsive UI.
+              <br><br>
+              <strong>Technologies:</strong> HTML, CSS, Vanilla JavaScript, LocalStorage.
+              <br><br>
+              <strong>What I learned:</strong> how to calculate contrast based on luminance, how to persist user
+              preferences,
+              and how to approach accessibility through both design and code.
+            </p>
+          </div>
+
+          <div class="project-card__buttons">
+            <a href="https://..." class="btn btn--primary" target="_blank">Live Demo</a>
+            <a href="https://..." class="btn btn--secondary" target="_blank">GitHub
+              Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card contenedor">
+        <div class="project-card__content">
+          <div class="project__info">
+            <h3 class="project-card__title">Portfolio</h3>
+            <p class="project-card__description">
+              Fully responsive site developed with HTML, Sass, and modern JavaScript. <br> SCSS architecture with
+              custom mixins and automation via Gulp. Hosted on GitHub Pages.
+            </p>
+          </div>
+          <div class="project-card__tech">
+            <img src="./assets/icons/html.svg" alt="HTML" title="HTML">
+            <img src="./assets/icons/css.svg" alt="CSS" title="CSS">
+            <img src="./assets/icons/javascript.svg" alt="JavaScript" title="JavaScript">
+            <img src="./assets/icons/sass.svg" alt="SASS" title="SASS">
+            <img src="./assets/icons/github.svg" alt="GitHub" title="Repositorio en GitHub">
+          </div>
+        </div>
+
+        <div class="project-card__toggle">
+          <button class="project-card__toggle-btn" aria-expanded="false" aria-controls="project3-extra">
+            <span class="project-card__text">View More</span>
+            <span class="arrow" aria-hidden="true">▼</span>
+          </button>
+        </div>
+
+        <div id="project3-extra" class="project-card__extra contenedor" hidden>
+          <img src="./img/project2.png" alt="Portfolio preview">
+          <div class="project-card__buttons">
+            <a href="https://portfolio-augusto.netlify.app/" class="btn btn--primary" target="_blank"
+              rel="noopener">Live Demo</a>
+            <a href="https://github.com/llopisar/portfolio-augusto" class="btn btn--secondary" target="_blank"
+              rel="noopener">GitHub Repo</a>
+          </div>
+        </div>
+      </article>
+
+    </div> <!-- div project__list -->
+  </section>
+
   <section class="about" id="about">
     <div class="about__container">
       <div class="about__block about__block1">
@@ -69,7 +197,7 @@
           I'm Augusto Llopis, a frontend developer with a background as a professional sous-chef — a journey that shaped
           my creativity, discipline, and love for building things from scratch. Originally from Argentina and now based
           in Portugal, I’ve always been drawn to design and technology. I studied graphic design for three years after
-          high school, and even though I didn't finish the degree, design has remained a core part of how I think and
+          high school, and even though I didn’t complete the degree, design has remained a core part of how I think and
           build. Today, I channel that same passion into creating thoughtful, user-centered digital experiences.
         </p>
       </div>
@@ -100,7 +228,7 @@
           understand the code behind it (yet). <br><br>
 
           <strong>I'm now looking for my first opportunity as a frontend developer where I can grow with a team,
-            contribute with both design and development, and keep learning how AI and the web can evolve
+            contribute with both design and development, and keep learning how AI and the web can creatively evolve
             together.</strong>
         </p>
 
@@ -144,110 +272,7 @@
           <em>Complementing my studies with tools like ChatGPT and Copilot as learning accelerators.</em>
         </p>
       </div>
-
-
     </div>
-  </section>
-
-  <section class="projects" id="projects">
-    <h2 class="projects__title">Projects</h2>
-    <div class="projects__list">
-
-
-      <article class="project-card contenedor">
-        <div class="project-card__content">
-          <div class="project-card__info">
-            <h3 class="project-card__title">Foodies Festival</h3>
-            <p class="project-card__description">
-              Responsive landing page built with semantic HTML structure, modular Sass styles, and JavaScript scroll
-              animations. <br>
-              Real project based on an existing festival website.
-            </p>
-          </div>
-
-          <div class="project-card__tech">
-            <img src="./assets/icons/html.svg" alt="HTML" title="HTML">
-            <img src="./assets/icons/css.svg" alt="CSS" title="CSS">
-            <img src="./assets/icons/javascript.svg" alt="JavaScript" title="JavaScript">
-          </div>
-        </div>
-
-        <div class="project-card__toggle">
-          <button class="project-card__toggle-btn" aria-expanded="false" aria-controls="project1-extra">
-            <span class="project-card__text">View More</span>
-            <span class="arrow" aria-hidden="true">▼</span>
-          </button>
-        </div>
-
-        <!-- Contenido extra -->
-        <div id="project1-extra" class="project-card__extra contenedor" hidden>
-          <img src="./img/project1.png" alt="Festival">
-          <div class="project-card__buttons">
-            <a href="https://foodies-festival.netlify.app/" class="btn btn--primary" target="_blank" rel="noopener">Live
-              Demo</a>
-            <a href="https://github.com/llopisar/foodies-festival" class="btn btn--secondary" target="_blank"
-              rel="noopener">GitHub Repo</a>
-          </div>
-        </div>
-      </article>
-
-
-      <div class="project-card__extra contenedor">
-        <img src="./img/project1.png" alt="Festival">
-
-        <div id="project2-extra" class="project-card__extra contenedor" hidden>
-          <img src="./img/project2.png" alt="Portfolio preview">
-          <div class="project-card__buttons">
-            <a href="https://portfolio-augusto.netlify.app/" class="btn btn--primary" target="_blank"
-              rel="noopener">Live Demo</a>
-            <a href="https://github.com/llopisar/portfolio-augusto" class="btn btn--secondary" target="_blank"
-              rel="noopener">GitHub Repo</a>
-          </div>
-        </div>
-      </div>
-      </article>
-
-
-      <article class="project-card contenedor">
-        <div class="project-card__content">
-          <div class="project__info">
-            <h3 class="project-card__title">Portfolio</h3>
-            <p class="project-card__description">
-              Fully responsive site developed with HTML, Sass, and modern JavaScript. <br> SCSS architecture with
-              custom mixins and automation via Gulp. Hosted on GitHub Pages.
-            </p>
-          </div>
-          <div class="project-card__tech">
-            <img src="./assets/icons/html.svg" alt="HTML" title="HTML">
-            <img src="./assets/icons/css.svg" alt="CSS" title="CSS">
-            <img src="./assets/icons/javascript.svg" alt="JavaScript" title="JavaScript">
-            <img src="./assets/icons/sass.svg" alt="SASS" title="SASS">
-            <img src="./assets/icons/github.svg" alt="GitHub" title="Repositorio en GitHub">
-          </div>
-        </div>
-
-        <div class="project-card__toggle">
-          <button class="project-card__toggle-btn" aria-expanded="false" aria-controls="project2-extra">
-            <span class="project-card__text">View More</span>
-            <span class="arrow" aria-hidden="true">▼</span>
-          </button>
-        </div>
-
-        <div class="project-card__extra contenedor">
-          <img src="./img/project2.png" alt="Festival">
-
-
-          <div class="project-card__buttons">
-            <a href="https://..." class="btn btn--primary" target="_blank">Live Demo</a>
-            <a href="https://..." class="btn btn--secondary" target="_blank">GitHub
-              Repo</a>
-          </div>
-        </div>
-      </article>
-
-
-    </div> <!-- div project__list -->
-
   </section>
 
   <section id="contact" class="contact">

@@ -2,8 +2,13 @@
 @use "../base/mixins" as m;
 @use "sass:color";
 
+#projects {
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+}
+
 .projects {
-  padding-bottom: 8rem;
+  margin-top: 8rem;
 
   &__title {
     font-size: 5rem;
@@ -150,6 +155,11 @@
     display: flex;
     gap: 1rem;
   }
+}
+
+.project2-card__extra {
+  display: flex;
+  gap: 2rem;
 }
 
 .project-card.is-open .project-card__extra {

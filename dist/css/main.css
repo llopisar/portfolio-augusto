@@ -153,6 +153,11 @@ html {
     transform: translateX(100%) skewX(-20deg);
   }
 }
+#home {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
 .video {
   position: relative;
   min-height: 30rem;
@@ -260,6 +265,10 @@ html {
   transform: translateY(-2px);
   background: rgba(253, 253, 253, 0.1176470588);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+#about {
+  margin-bottom: 5rem;
 }
 
 .about {
@@ -408,8 +417,13 @@ html {
   color: #00c7b7;
 }
 
+#projects {
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+}
+
 .projects {
-  padding-bottom: 8rem;
+  margin-top: 8rem;
 }
 .projects__title {
   font-size: 5rem;
@@ -543,6 +557,11 @@ html {
   gap: 1rem;
 }
 
+.project2-card__extra {
+  display: flex;
+  gap: 2rem;
+}
+
 .project-card.is-open .project-card__extra {
   max-height: 1000px;
 }
@@ -565,7 +584,7 @@ html {
   transition: background-color 0.3s ease;
 }
 .project-card__buttons .btn--primary {
-  background-color: #133C55;
+  background-color: #2b546e;
   color: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
