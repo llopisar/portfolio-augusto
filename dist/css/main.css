@@ -558,8 +558,16 @@ html {
 }
 
 .project2-card__extra {
-  display: flex;
-  gap: 2rem;
+  text-align: center;
+}
+.project2-card__extra img {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .project2-card__extra {
+    display: flex;
+    gap: 2rem;
+  }
 }
 
 .project-card.is-open .project-card__extra {
